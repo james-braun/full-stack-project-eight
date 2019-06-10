@@ -1,0 +1,28 @@
+{
+  "name": "full-stack-project-eight",
+  "version": "1.0.0",
+  "description": "Library DataBase",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/james-braun/full-stack-project-eight.git"
+  },
+  "author": "James Braun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/james-braun/full-stack-project-eight/issues"
+  },
+  "homepage": "https://github.com/james-braun/full-stack-project-eight#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^2.0.3",
+    "sequelize": "^5.8.7",
+    "sequelize-cli": "^5.4.0",
+    "serve-favicon": "^2.5.0",
+    "sqlite3": "^4.0.8"
+  }
+}
