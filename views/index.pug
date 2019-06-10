@@ -2,23 +2,23 @@ extends layout.pug
 
 block content
     h1 Books
-    p 
-        a.button(href="/books/new") Create New Book
-        .page
-            .page-header
-            table
-                thead
-                    tr
-                        th Title
-                        th Author
-                        th Genre
-                        th Year
-                    tbody.bookList
-                        each book in books
-                            tr.book-item
-                                td
-                                    a(href=`/books/${book.id}`) #{book.title}
-                                td #{book.author}
-                                td #{book.genre}
-                                td #{book.year}
+    .page
+        p.create-book
+            a.button(href="/books/new") Create New Book
+        .page-header
+        table
+            thead
+                tr
+                    th Title
+                    th Author
+                    th Genre
+                    th Year
+                tbody.bookList
+                    each book in books
+                        tr.book-item
+                            td
+                                a(href=`/books/${book.id}`) #{book.title}
+                            td #{book.author}
+                            td #{book.genre}
+                            td #{book.year}
     script(src="/static/js/script.js")

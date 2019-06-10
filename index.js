@@ -6,8 +6,12 @@ var sequelize = require("./models").sequelize;
 
 // creates an express application.
 const app = express();
+
+// parse the databse data so it's readable.
 var bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.urlencoded({ extended: true }))
+
+// create a icon in the tab of the webpage.
 var favicon = require('serve-favicon');
 var path = require('path');
 app.use(favicon(path.join(__dirname, 'public/img', 'favicon.ico')))
@@ -18,6 +22,7 @@ app.use('/static', express.static('public'));
 // installs pug templating engine.
 app.set('view engine', 'pug');
 
+// use seperate file for routes.
 const routes = require('./routes');
 
 app.use(routes);
@@ -50,7 +55,8 @@ app.use((err, req, res, next) => {
 });
 // sets up the development server.
 // the callback function tells what port
-// the server is running on.
+// the server is running on but first 
+// sync the database.
 sequelize.sync().then(function () {
     app.listen(3000, () => {
         console.log('The application is running on localhost:3000!');

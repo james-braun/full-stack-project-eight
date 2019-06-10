@@ -1,6 +1,7 @@
 body {
   padding: 10px 50px 50px;
   font: 18px "Garamond", serif;
+  max-width: 650px;
 }
 
 a {
@@ -53,6 +54,10 @@ h2 {
   padding-top: 20px;
 }
 
+table {
+    margin: 0 auto;
+}
+
 th {
   border-bottom: 2px solid #D8B493;
   text-align: left;
@@ -97,7 +102,8 @@ input[type=text] {
 }
 
 .pagination {
-    margin: 40px 0 0 200px;
+    margin: 40px 0 0 0;
+    text-align: center;
 }
 
     .pagination li {
@@ -109,31 +115,37 @@ input[type=text] {
             border-radius: 5px;
             padding: 3px 8px;
             text-decoration: none;
-            color: #01b189;
+            color: #019875;
         }
 
             .pagination li a.active,
             .pagination li a:hover {
-                background-color: #01b189;
+                background-color: #019875;
                 color: #fff;
             }
 
+.create-book {
+    display: inline-block;
+}
+
 .page-header {
     margin-bottom: 20px;
+    margin-left: 245px;
+    display: inline-block;
 }
 
         .page-header .book-search input {
-            border-radius: 5px;
-            border: 1px solid #eaeaea;
+            /*border-radius: 5px;*/
+            border: 1px solid lightslategrey;
             padding: 8px 15px;
             font-size: 14px;
         }
 
         .page-header .book-search button {
-            border-radius: 5px;
-            border: 1px solid #eaeaea;
+            /*border-radius: 5px;*/
+            border: 1px solid lightslategrey;
             padding: 8px 15px;
             font-size: 14px;
-            background-color: #01b189;
+            background-color: #019875;
             color: #fff
         }

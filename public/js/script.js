@@ -9,7 +9,7 @@ const bookList = document.getElementsByClassName("book-item");
 // Create and append a search element to the page.
 const search = document.createElement('div');
 search.className = "book-search";
-search.innerHTML = "<input id=\"input\" type=\"search\" value=\"\" name=\"book_search\" placeholder=\"Search for atudents...\"><button id=\"button\" type=\"submit\" name=\"book_search\">search</button>"
+search.innerHTML = "<input id=\"input\" type=\"search\" value=\"\" name=\"book_search\" placeholder=\"Search for books...\"><button id=\"button\" type=\"submit\" name=\"book_search\">search</button>"
 document.getElementsByClassName("page-header")[0].appendChild(search);
 
 // Create a message for when there are no search resullts.
@@ -28,7 +28,7 @@ function showPage(list, page, pageSize) {
     var startIndex = page * pageSize - pageSize;
     var endIndex = page * pageSize;
 
-    // itterate though list of stuents and show and hide them
+    // itterate though list of books and show and hide them
     // based on whether they are between the indexes and
     // are not in the search.
     var i = 0;
@@ -145,7 +145,7 @@ function appendPageLinks(bookList) {
 appendPageLinks(bookList);
 
 // function curtesy of Prakash Poudel
-// https://www.sharmaprakash.com.np/javascript/ie-alternative-to-inludes/
+// https://www.sharmaprakash.com.np/javascript/ie-alternative-to-includes/
 function includes(container, value) {
     var returnValue = false;
     var pos = container.indexOf(value);
@@ -158,7 +158,7 @@ function includes(container, value) {
 // Add event listener keyup.
 document.getElementById('input').addEventListener('keyup', function () {
 
-    // for every book if book name is not in search then remove
+    // for every book if that book is not in search then remove
     // or make it "invisible" to showPage.
     for (var i = 0; i < bookList.length; i += 1) {
         if ((!includes(bookList[i].getElementsByTagName('a')[0].innerHTML.toUpperCase(), this.value.toUpperCase())) &&
@@ -180,7 +180,7 @@ document.getElementById('input').addEventListener('keyup', function () {
 // Add click event,
 document.getElementById('button').addEventListener('click', function () {
 
-    // for every book if book name is not in search then remove
+    // for every book if that book is not in search then remove
     // or make it "invisible" to showPage.
     for (var i = 0; i < bookList.length; i += 1) {
         if ((!(includes(bookList[i].getElementsByTagName('a')[0].innerHTML.toUpperCase(), document.getElementById('input').value.toUpperCase()))) &&
