@@ -42,6 +42,11 @@ app.use((err, req, res, next) => {
 
     // create an error page.
     console.log(err.message);
+    if (err.status === 404) {
+        res.render('page_not_found', { title: "Page Not Found" });
+    } else if (err.status === 500) {
+        res.render('error', { title: "Server Error" });
+    }
 });
 // sets up the development server.
 // the callback function tells what port

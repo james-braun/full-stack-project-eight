@@ -1,10 +1,14 @@
 {
   "ExpandedNodes": [
     "",
+    "\\config",
     "\\example-markup",
+    "\\public",
+    "\\public\\js",
+    "\\public\\stylesheets",
     "\\routes",
     "\\views"
   ],
-  "SelectedNode": "\\routes\\index.js",
+  "SelectedNode": "\\views\\index.pug",
   "PreviewInSolutionExplorer": false
 }
