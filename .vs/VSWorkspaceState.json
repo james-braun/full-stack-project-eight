@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\example-markup"
+    "\\example-markup",
+    "\\routes",
+    "\\views"
   ],
-  "SelectedNode": "\\example-markup\\book_detail.html",
+  "SelectedNode": "\\routes\\index.js",
   "PreviewInSolutionExplorer": false
 }
