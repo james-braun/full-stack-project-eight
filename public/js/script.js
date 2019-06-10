@@ -161,7 +161,6 @@ document.getElementById('input').addEventListener('keyup', function () {
     // for every book if book name is not in search then remove
     // or make it "invisible" to showPage.
     for (var i = 0; i < bookList.length; i += 1) {
-        console.log(bookList[i].getElementsByTagName('a')[0].innerHTML);
         if ((!includes(bookList[i].getElementsByTagName('a')[0].innerHTML.toUpperCase(), this.value.toUpperCase())) &&
             (!includes(bookList[i].getElementsByTagName('td')[1].innerHTML.toUpperCase(), this.value.toUpperCase())) &&
             (!includes(bookList[i].getElementsByTagName('td')[2].innerHTML.toUpperCase(), this.value.toUpperCase())) &&
