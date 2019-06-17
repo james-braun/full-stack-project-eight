@@ -3,12 +3,13 @@
     "",
     "\\config",
     "\\example-markup",
+    "\\models",
     "\\public",
     "\\public\\js",
     "\\public\\stylesheets",
     "\\routes",
     "\\views"
   ],
-  "SelectedNode": "\\package.json",
+  "SelectedNode": "\\routes\\index.js",
   "PreviewInSolutionExplorer": false
 }

@@ -62,8 +62,7 @@ router.get('/books/:id', (req, res, next) => {
 
     // find book in database.
     Books.findByPk(req.params.id).then((book) => {
-
-        // if book is in database then render udate form.
+        // if book is in database then render update form.
         // else throw error.
         if (book) {
             res.render('update-book', { errors: null, book: book, title: "Update Book" });
@@ -75,9 +74,9 @@ router.get('/books/:id', (req, res, next) => {
 
     // catch any uncaught server errors.
     }).catch(function (error) {
-        const err = new Error('500 - Internal Server Error');
-        err.status = 500;
-        next(err);
+        
+        error.status = 500;
+        next(error);
     });
 });
 
@@ -117,9 +116,9 @@ router.post('/books/:id', (req, res, next) => {
 
     // catch any uncought server errors.
     }).catch(function (error) {
-        const err = new Error('500 - Internal Server Error');
-        err.status = 500;
-        next(err);
+        
+        error.status = 500;
+        next(error);
     });
 });
 
