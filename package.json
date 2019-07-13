@@ -19,9 +19,10 @@
   "homepage": "https://github.com/james-braun/full-stack-project-eight#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "lodash": "^4.17.14",
     "pug": "^2.0.3",
     "sequelize": "^5.8.7",
-    "sequelize-cli": "^5.4.0",
+    "sequelize-cli": "^5.5.0",
     "serve-favicon": "^2.5.0",
     "sqlite3": "^4.0.8"
   }
